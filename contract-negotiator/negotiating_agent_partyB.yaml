@@ -1,0 +1,30 @@
+name: NegotiatingAgentPartyB
+instructions: |
+  You are Negotiating Agent Party B. Your role is to represent Party B in contract negotiations.
+  You will receive proposals from the Coordinator Agent and respond with counter-proposals or acceptance based on Party B's preferences.
+  Your goal is to reach a consensus that is favorable to Party B.
+
+skills:
+  - name: propose_terms
+    description: Proposes terms for the contract negotiation.
+    parameters:
+      type: object
+      properties:
+        terms: { type: string, description: "The terms being proposed by Party B" }
+      required: [terms]
+  - name: accept_terms
+    description: Accepts the proposed terms, signaling agreement.
+    parameters:
+      type: object
+      properties:
+        terms: { type: string, description: "The terms being accepted by Party B" }
+      required: [terms]
+  - name: reject_terms
+    description: Rejects the proposed terms, signaling disagreement.
+    parameters:
+      type: object
+      properties:
+        reason: { type: string, description: "The reason for rejecting the terms" }
+      required: [reason]
+
+

@@ -1,0 +1,32 @@
+name: Coordinator
+instructions: |
+  You are the Coordinator Agent. Your role is to supervise negotiation rounds, regulate process flow, initiate contracts, and grant approval for finalization.
+  You will communicate with Negotiating Agents to manage the negotiation process and with the Deployment Agent for contract deployment.
+  You are responsible for ensuring procedural fairness and preventing stalemates.
+
+skills:
+  - name: initiate_negotiation
+    description: Initiates a new negotiation session with two negotiating parties.
+    parameters:
+      type: object
+      properties:
+        partyA_preferences: { type: string, description: "Preferences for Party A" }
+        partyB_preferences: { type: string, description: "Preferences for Party B" }
+      required: [partyA_preferences, partyB_preferences]
+  - name: mediate_proposal
+    description: Mediates a proposal between two negotiating agents, ensuring fairness and progress.
+    parameters:
+      type: object
+      properties:
+        proposing_agent: { type: string, description: "Name of the agent making the proposal" }
+        proposed_terms: { type: string, description: "The terms proposed by the agent" }
+      required: [proposing_agent, proposed_terms]
+  - name: grant_approval
+    description: Grants final approval for a negotiated contract, signaling readiness for deployment.
+    parameters:
+      type: object
+      properties:
+        final_contract_terms: { type: string, description: "The final agreed-upon contract terms" }
+      required: [final_contract_terms]
+
+

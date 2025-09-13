@@ -1,0 +1,19 @@
+chat_model:
+  provider: openai
+  name: gemini-mini
+  temperature: 0.8
+agents:
+  - chat.yaml
+  - coordinator.yaml
+  - negotiating_agent_partyA.yaml
+  - negotiating_agent_partyB.yaml
+  - deployment_agent.yaml
+skills:
+  - sandbox.js
+  - filesystem.yaml
+  - coordinator.js
+  - negotiating_agent_partyA.js
+  - negotiating_agent_partyB.js
+  - deployment_agent.js
+  - data_storage.js
+

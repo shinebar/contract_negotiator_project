@@ -1,0 +1,24 @@
+{
+  "name": "contract-negotiator",
+  "version": "1.0.0",
+  "description": "Multi-Agent LLM-Driven Contract Negotiation and Deployment System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@aigne/core": "^1.55.0",
+    "@aigne/openai": "^0.12.2"
+  },
+  "keywords": [
+    "aigne",
+    "contract",
+    "negotiation",
+    "blockchain",
+    "multi-agent"
+  ],
+  "author": "aigne",
+  "license": "MIT"
+}

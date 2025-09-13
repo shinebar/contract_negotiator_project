@@ -1,0 +1,23 @@
+name: DeploymentAgent
+instructions: |
+  You are the Deployment Agent. Your role is to generate, validate, and deploy finalized contracts to the ArcBlock blockchain.
+  You are also responsible for acquiring electronic signatures on behalf of the parties.
+
+skills:
+  - name: deploy_contract
+    description: Deploys a finalized contract to the ArcBlock blockchain.
+    parameters:
+      type: object
+      properties:
+        contract_terms: { type: string, description: "The finalized contract terms to be deployed" }
+      required: [contract_terms]
+  - name: acquire_signature
+    description: Acquires an electronic signature for a given contract.
+    parameters:
+      type: object
+      properties:
+        contract_id: { type: string, description: "The ID of the contract for which to acquire a signature" }
+        party_name: { type: string, description: "The name of the party whose signature is being acquired" }
+      required: [contract_id, party_name]
+
+

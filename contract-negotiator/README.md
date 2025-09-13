@@ -53,11 +53,11 @@ const fullEndpoint = joinURL(endpoint, '/api/gql');
 
 const client = new Client(fullEndpoint);
 client.setAuthAccessKey({
-  accessKeyId: "z1fazFi8XNBNQ1ANmwuyiEiuvtntSfsBPwG",
-  accessKeySecret: "z3bjYutwwPXugCZrB6Do65SGAQxpPtah4xgQqVr8MT2BXLVr2stBJhXYndjVDGVmKijmzoFR5AqepCBFRjS4cdm7K",
+  accessKeyId: "yours parameter",
+  accessKeySecret: "yours parameter",
 });
 
-const rootDid = 'zNKq13Dr2TBHELpLDUJFGxepiGP7YHbAVxPn';
+const rootDid = 'yours parameter';
 const result = await client.getBlocklet(
   { input: { did: rootDid, attachRuntimeInfo: false } },
   { headers: { 'x-access-blocklet': rootDid } }
